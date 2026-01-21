@@ -1,0 +1,23 @@
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-xml-checker"
+version = "0.1.0"
+description = "Small python checker to detect corrupted PDF or XML files"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+dependencies = [
+	"pikepdf>=3.0.0",
+	"lxml>=4.6",
+]
+
+[project.scripts]
+pdf-xml-checker = "cli:main"
+
+[tool.setuptools]
+py-modules = ["cli", "pdf_checker", "xml_checker"]
+
